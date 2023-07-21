@@ -1,0 +1,43 @@
+{%extends 'pairs/base.html'%}
+{% block title %}分享約會{% endblock %}
+{% block content %}
+		<section id='intro' >
+
+			<div class='jumbotron'>
+
+				<div class='container'>
+				
+					<div class="col-md-12">
+						<h1>Dates Sharing</h1>
+
+
+					</div>
+				</div>
+			</div>
+			
+
+		</section>
+
+<div class='container'>
+
+
+	{% for post in posts %}
+		{% cycle "<div class='row'>" "" ""%}
+			<div class="col-md-4">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						{{post.ddate}}
+					</div>
+					<div class="panel-body">
+						{{post.note | linebreaks}}
+					</div>
+					<div class="panel-footer">
+
+					</div>
+				</div>
+			</div>
+		{% cycle "" "" "</div>"%}
+
+	{% endfor %}
+</div>
+{% endblock %}

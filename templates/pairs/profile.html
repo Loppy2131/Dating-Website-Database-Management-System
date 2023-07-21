@@ -1,0 +1,102 @@
+{%extends 'pairs/base.html'%}
+{% load static%}
+
+
+	{% block title %}{{username}}'s&nbsp;profile{%endblock%}
+	{% block content %}
+
+    <div class='row'>
+		<div class="col-md-7">
+			<div class='panel panel-default'>
+				<div class='panel-heading' align='center'>
+					<h4>Your Profile</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+    &nbsp;&nbsp;
+    <section id='intro' >
+
+			<div class='jumbotron'>
+	
+				<div class='container'>
+			
+					<div class="col-md-4" align="center">
+						
+					 <div>
+                            <a href="/upload" id="img" ><img class='circle' src="/media/{{ user.photo }}" alt="img" width="200" height="200";></a></div>
+      
+ 
+
+
+
+
+					</div>
+               
+                         <div class="col-md-4" align="center">
+                         <table class="table table-bordered table-striped">
+    
+ 
+        </thead>
+        <tbody>
+
+                
+                <tr>
+                    <td width="50px">Nickname</td>
+                    <td width="">{{ user.name }}</td>
+     
+                </tr>
+                <tr>
+                    <td>Height</td>
+                    <td>{{ user.height }}</td>
+ 
+                </tr>
+                                <tr>
+                    <td>Weight</td>
+                    <td>{{ user.weight }}</td>
+
+                </tr>
+                                <tr>
+                    <td>Gender</td>
+                    <td>{{ user.gender }}</td>
+
+                </tr>
+                                <tr>
+                    <td>Gender match </td>
+                    <td>{{ user.pair_gender }}</td>
+                 
+                        
+
+
+                   
+                </tr>
+                <tr>
+                    <td>Phone Number</td>
+                    <td>{{ user.phone }}</td>
+                 
+                        
+
+
+                   
+                </tr>
+                                <tr>
+                    <td>Introduce </td>
+                    <td>{{ user.intro}}</td>
+                 
+                        
+
+
+                   
+                </tr>
+        </tbody>
+    </table>   <a class="btn" text-align="right" href="updated/"> EDIT PROFILE </a>
+
+           </div>
+				</div>
+			</div>
+			
+
+		</section>
+
+			
+{%endblock%}

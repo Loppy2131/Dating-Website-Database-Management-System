@@ -1,0 +1,100 @@
+{%extends 'pairs/base.html'%}
+{% load static%}
+
+
+	{% block title %}{{pairuser.name}}'s&nbsp;profile{%endblock%}
+	{% block content %}
+
+    <div class='row'>
+		<div class="col-md-7">
+			<div class='panel panel-default'>
+				<div class='panel-heading' align='center'>
+					<h4>{{pairuser.name}} Profile</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+    <section id='intro' >
+
+			<div class='jumbotron'>
+	
+				<div class='container'>
+			
+					<div class="col-md-4" align="center">
+						
+					 <div>
+                            <img class='circle' src="/media/{{ pairuser.photo }}" alt="img" width="200" height="200"></a></div>
+      
+ 
+
+
+
+
+					</div>
+               
+                         <div class="col-md-4" align="center">
+                         <table class="table table-bordered table-striped">
+    
+ 
+        </thead>
+        <tbody>
+
+                
+                <tr>
+                    <td width="50px">Nickname</td>
+                    <td width="">{{ pairuser.name }}</td>
+     
+                </tr>
+                <tr>
+                    <td>Height</td>
+                    <td>{{ pairuser.height }}</td>
+ 
+                </tr>
+                                <tr>
+                    <td>Weight</td>
+                    <td>{{ pairuser.weight }}</td>
+
+                </tr>
+                                <tr>
+                    <td>Gender</td>
+                    <td>{{ pairuser.gender }}</td>
+
+                </tr>
+                                <tr>
+                    <td>Gender match </td>
+                    <td>{{ pairuser.pair_gender }}</td>
+                 
+                        
+
+
+                   
+                </tr>
+                <tr>
+                    <td>Phone number </td>
+                    <td>{{ pairuser.phone }}</td>
+                 
+                        
+
+
+                   
+                </tr>
+                                <tr>
+                    <td>Introduce </td>
+                    <td>{{ pairuser.intro}}</td>
+                 
+                        
+
+
+                   
+                </tr>
+        </tbody>
+    </table>  
+           </div>
+				</div>
+			</div>
+			
+
+		</section>
+
+			
+{%endblock%}
